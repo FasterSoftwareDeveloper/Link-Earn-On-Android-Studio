@@ -1,21 +1,21 @@
-**Link Earn In Sketchware Pro**:  
+**Link Earn on Android Studio**:  
 
 ---
 
 # 🌟 **Link Earn**  
 
-🎉 **Version:** Faster Panel v1.0  
+🎉 **Version:** Faster Panel v1.5  
 🚀 **UI Framework:** Material 3  
 📱 **Supports Android 15**  
 
 ---
 
-![Logo](https://raw.githubusercontent.com/FasterSoftwareDeveloper/Link-Earn-Sketchware-Pro-Project/refs/heads/master/thumbnail.png)
+![Logo]()
 
 ## Links
-YouTube Video: https://youtu.be/pJy5yi88-mE?si=x83Gr2nsOpP5kkAb
+YouTube Video: 
 
-Telegram Post: https://t.me/fastersoftwaredeveloper/327
+Telegram Post: 
 
 ### 📖 **About the App**  
 
@@ -25,7 +25,7 @@ Whether you're publishing on the **Play Store** or using it for personal project
 
 ### 🚀 **What Makes Link Earn Special?**  
 1. **Blazing-Fast Admin Panel**:  
-   - Built with performance in mind, the **Faster Panel V1.0** ensures you can manage tasks and user data quickly and efficiently.  
+   - Built with performance in mind, the **Faster Panel V1.5** ensures you can manage tasks and user data quickly and efficiently.  
 2. **Material 3 UI**:  
    - Enjoy a polished, modern design that integrates the latest Android UI standards.  
 3. **Compatibility**:  
@@ -55,20 +55,17 @@ The app provides users with a comprehensive interface to manage their activities
 - 🏅 **Leaderboard**: Compete with others and track your ranking.  
 
 #### **Admin Panel**  
-Manage the app, users, and tasks efficiently with the **Faster Panel V1.0**.  
+Manage the app, users, and tasks efficiently with the **Faster Panel V1.5**.  
 
 ---
 
-### 🔧 **Project Requirements**  
-
-#### **Minimum Requirements**:  
-- **Sketchware Pro** (Nightly Build, Min API 26).  
-- **Minimum API Level**: 23.  
+### 🔧 **Project Api**  
+- **Minimum API Level**: 24.  
 - **Target API Level**: 35.  
-- **Supported Android Versions**: Android 9+ (up to Android 15).  
+- **Supported Android Versions**: Android 7+ (up to Android 15).
 
-#### **Why Choose Sketchware Pro?**  
-Sketchware Pro enables rapid development and customization, ensuring that even non-developers can set up the app with ease.  
+#### **Why Choose Android Studio?**  
+Android Studio enables rapid development and customization, ensuring that even developers can set up the app with ease.  
 
 ---
 
@@ -78,48 +75,10 @@ Sketchware Pro enables rapid development and customization, ensuring that even n
 
 ## **File Map**
 
-### **User Panel** (`Link_Earn_User`)
+### **User Panel** (`LinkEarn`)
 1. Navigate to the folder structure:  
-   ```
-   data  
-   local_libs  
-   resources  
-   project  
-   ```
-2. Select all files in the folder and compress them into a `.zip` file.  
-3. Rename the `.zip` file to `linkEarn.swb`.  
-
----
-
-### **Admin Panel** (`Link_Earn_Admin`)  
-1. Navigate to the folder structure:  
-   ```
-   data  
-   local_libs  
-   resources  
-   project  
-   ```
-2. Select all files in the folder and compress them into a `.zip` file.  
-3. Rename the `.zip` file to `linkEarnAdmin.swb`.  
-
----
-
-## **Block & Menu Import Instructions**
-
-1. Go to the **Import** folder and locate the following files:
-   - `block.json`  
-   - `palette.json`  
-   - `menu.json`  
-
-2. Navigate to the **Sketchware resources directory**:  
-   ```
-   /storage/emulated/0/.sketchware/resources/block/My Block/
-   ```
-
-3. Paste the files (`block.json`, `palette.json`, `menu.json`) into this directory.  
-   - **Warning**: Pasting these files will overwrite any existing custom blocks. Ensure you back up your current blocks before proceeding.  
-
-4. Restart Sketchware Pro to apply changes.
+- LinkEarn is user Panel.
+- Link_Earn_Admin is admin panel.
 
 ---
 
@@ -129,7 +88,7 @@ Sketchware Pro enables rapid development and customization, ensuring that even n
      - 📍 Navigate to Firebase project settings → **Service Accounts** tab → **Generate new private key**.  
      - Save and replace the file accordingly.
      - Now go to firebase select your project then click three dot menu › project settings › General › Select Your App › download google-services.json
-     - Go to Sketchware Pro open your project then click there dot menu › Library › Firebase › Click Import from google-services.json" and import the json file.
+     - Go to Android Studio open your project then open app › src › main res › values › secrets.xml replace project id, database url, project key etc.
 
 2. **Edit `strings.xml`**:  
    - Customize the app name and other relevant details:  
