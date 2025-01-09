@@ -1,0 +1,80 @@
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical">
+	<androidx.core.widget.NestedScrollView
+		android:id="@+id/vscroll1"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		app:layout_behavior="@string/appbar_scrolling_view_behavior">
+		<RelativeLayout
+			android:id="@+id/relativelayout1"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:padding="8dp"
+			android:background="@color/DarkBlue">
+			<com.google.android.material.button.MaterialButtonToggleGroup
+				android:id="@+id/history_bt_body"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="10dp"
+				android:layout_marginBottom="10dp"
+				android:gravity="center_horizontal|center_vertical"
+				android:orientation="horizontal"
+				app:singleSelection="true"
+				app:checkedButton="@id/task_history_bt"
+				app:selectionRequired="true"
+				android:layout_centerHorizontal="true">
+				<com.google.android.material.button.MaterialButton
+					android:id="@+id/task_history_bt"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:padding="8dp"
+					android:text="Task History"
+					android:textSize="16sp"
+					android:textColor="@color/Text_Color"
+					style="?attr/materialButtonOutlinedStyle"
+					android:enabled="true" />
+				<com.google.android.material.button.MaterialButton
+					android:id="@+id/withdraw_bt"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:padding="8dp"
+					android:text="Withdraw History"
+					android:textSize="16sp"
+					android:textColor="@color/Text_Color"
+					style="?attr/materialButtonOutlinedStyle" />
+				<com.google.android.material.button.MaterialButton
+					android:id="@+id/deposit_bt"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:padding="8dp"
+					android:text="Deposit History"
+					android:textSize="16sp"
+					android:textColor="@color/Text_Color"
+					style="?attr/materialButtonOutlinedStyle" />
+			</com.google.android.material.button.MaterialButtonToggleGroup>
+			<androidx.recyclerview.widget.RecyclerView
+				android:id="@+id/task_history_listview"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:padding="8dp"
+				android:layout_below="@id/history_bt_body" />
+			<androidx.recyclerview.widget.RecyclerView
+				android:id="@+id/withdraw_history_list"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:padding="8dp"
+				android:layout_below="@id/task_history_listview" />
+			<androidx.recyclerview.widget.RecyclerView
+				android:id="@+id/deposit_history_list"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:padding="8dp"
+				android:layout_below="@id/withdraw_history_list" />
+		</RelativeLayout>
+	</androidx.core.widget.NestedScrollView>
+</LinearLayout>

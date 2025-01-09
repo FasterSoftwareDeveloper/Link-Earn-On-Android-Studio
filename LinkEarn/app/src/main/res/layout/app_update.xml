@@ -1,0 +1,141 @@
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical">
+	<RelativeLayout
+		android:id="@+id/relativelayout1"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:paddingLeft="15dp"
+		android:paddingTop="8dp"
+		android:paddingRight="15dp"
+		android:paddingBottom="8dp"
+		android:background="@color/DarkBlue">
+		<com.google.android.material.card.MaterialCardView
+			android:id="@+id/linearAppName"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			app:cardBackgroundColor="@color/DarkBlue"
+			app:strokeColor="@color/colorSurface"
+			android:layout_centerInParent="true">
+			<LinearLayout
+				android:id="@+id/linear4"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:padding="3dp"
+				android:orientation="horizontal">
+				<ImageView
+					android:id="@+id/imageview1"
+					android:layout_width="40dp"
+					android:layout_height="40dp"
+					android:layout_marginLeft="6dp"
+					android:layout_marginTop="6dp"
+					android:layout_marginBottom="6dp"
+					android:src="@drawable/logo"
+					android:scaleType="fitXY" />
+				<LinearLayout
+					android:id="@+id/linear6"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:paddingTop="8dp"
+					android:paddingRight="8dp"
+					android:paddingBottom="8dp"
+					android:orientation="vertical">
+					<TextView
+						android:id="@+id/textview2"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:padding="8dp"
+						android:text="@string/app_name"
+						android:textSize="16sp"
+						android:textStyle="bold"
+						android:textColor="@color/Text_Color" />
+					<TextView
+						android:id="@+id/textview3"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:paddingLeft="8dp"
+						android:paddingRight="8dp"
+						android:paddingBottom="3dp"
+						android:text="New update available!"
+						android:textSize="14sp"
+						android:textColor="@color/LightBlue" />
+					<TextView
+						android:id="@+id/versionandcode_txt"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:paddingLeft="8dp"
+						android:paddingRight="8dp"
+						android:paddingBottom="8dp"
+						android:text="1.0 version. 1 version code"
+						android:textSize="14sp"
+						android:textColor="@color/md_theme_dark_surfaceTint" />
+				</LinearLayout>
+			</LinearLayout>
+		</com.google.android.material.card.MaterialCardView>
+		<LinearLayout
+			android:id="@+id/linear2"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:padding="8dp"
+			android:orientation="vertical"
+			android:layout_below="@id/linearAppName">
+			<TextView
+				android:id="@+id/whatsNew"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:padding="8dp"
+				android:text="What's New\?"
+				android:textSize="16sp"
+				android:textStyle="bold"
+				android:textColor="@color/Text_Color" />
+			<TextView
+				android:id="@+id/whatsNew_txt"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:paddingLeft="8dp"
+				android:paddingRight="8dp"
+				android:paddingBottom="8dp"
+				android:text="..........."
+				android:textSize="16sp"
+				android:textColor="@color/Text_Color" />
+		</LinearLayout>
+		<LinearLayout
+			android:id="@+id/linear3"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="20dp"
+			android:padding="3dp"
+			android:orientation="horizontal"
+			android:layout_below="@id/linear2">
+			<Button
+				android:id="@+id/button1"
+				android:layout_width="200dp"
+				android:layout_height="wrap_content"
+				android:layout_marginRight="5dp"
+				android:padding="8dp"
+				android:text="Exit the app"
+				android:textSize="16sp"
+				android:textStyle="bold"
+				android:textColor="@color/Text_Color"
+				android:layout_weight="1"
+				style="?attr/materialButtonOutlinedStyle" />
+			<Button
+				android:id="@+id/button2"
+				android:layout_width="200dp"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="5dp"
+				android:padding="8dp"
+				android:text="Update now!"
+				android:textSize="16sp"
+				android:textStyle="bold"
+				android:textColor="@color/Text_Color"
+				android:layout_weight="1"
+				app:backgroundTint="@color/seed" />
+		</LinearLayout>
+	</RelativeLayout>
+</LinearLayout>

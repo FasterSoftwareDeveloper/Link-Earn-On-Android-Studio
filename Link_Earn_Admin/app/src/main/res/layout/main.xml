@@ -1,0 +1,333 @@
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical">
+	<ScrollView
+		android:id="@+id/vscroll1"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:fillViewport="true"
+		android:scrollbars="none">
+		<LinearLayout
+			android:id="@+id/linear5"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:background="#0C141B"
+			android:orientation="vertical">
+			<RelativeLayout
+				android:id="@+id/relativelayout2"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:padding="8dp"
+				android:background="@color/DarkBlue"
+				android:layout_weight="1">
+				<ImageView
+					android:id="@+id/logo"
+					android:layout_width="80dp"
+					android:layout_height="80dp"
+					android:src="@drawable/app_logo"
+					android:scaleType="fitXY"
+					android:layout_centerInParent="true" />
+				<ImageView
+					android:id="@+id/app_name"
+					android:layout_width="180dp"
+					android:layout_height="50dp"
+					android:layout_marginTop="6dp"
+					android:src="@drawable/app_name"
+					android:scaleType="fitXY"
+					android:layout_below="@id/logo"
+					android:layout_centerInParent="true" />
+				<ImageView
+					android:id="@+id/panel_name"
+					android:layout_width="230dp"
+					android:layout_height="50dp"
+					android:src="@drawable/panel_loho"
+					android:scaleType="fitXY"
+					android:layout_below="@id/app_name"
+					android:layout_centerInParent="true" />
+			</RelativeLayout>
+			<RelativeLayout
+				android:id="@+id/BodyLogin"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:padding="8dp"
+				android:background="@color/background">
+				<LinearLayout
+					android:id="@+id/dot"
+					android:layout_width="40dp"
+					android:layout_height="10dp"
+					android:padding="8dp"
+					android:background="@color/layout_dot"
+					android:orientation="horizontal"
+					android:layout_centerHorizontal="true" />
+				<LinearLayout
+					android:id="@+id/linear8"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:padding="8dp"
+					android:orientation="vertical"
+					android:layout_centerInParent="true">
+					<TextView
+						android:id="@+id/textview1"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:padding="8dp"
+						android:text="Secure Login!"
+						android:textSize="20sp"
+						android:textStyle="bold"
+						android:textColor="@color/md_theme_dark_primary"
+						android:layout_gravity="center_horizontal|center_vertical" />
+					<ImageView
+						android:id="@+id/imageview1"
+						android:layout_width="80dp"
+						android:layout_height="80dp"
+						android:src="@drawable/secure_log"
+						android:scaleType="fitXY"
+						android:layout_gravity="center_horizontal|center_vertical" />
+					<com.google.android.material.textfield.TextInputLayout
+						android:id="@+id/textInput_username"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginTop="8dp"
+						style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+						app:boxStrokeColor="@color/md_theme_light_tertiaryContainer"
+						app:hintTextColor="@color/md_theme_light_tertiaryContainer"
+						app:prefixText="@">
+						<com.google.android.material.textfield.TextInputEditText
+							android:id="@+id/edittext_username"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:textSize="16sp"
+							android:textColor="@color/Text_Color"
+							android:hint="Type Username"
+							android:textColorHint="@color/md_theme_light_tertiaryContainer"
+							android:singleLine="true"
+							android:imeOptions="actionNext" />
+					</com.google.android.material.textfield.TextInputLayout>
+					<com.google.android.material.textfield.TextInputLayout
+						android:id="@+id/textinput_pasowrd"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginTop="8dp"
+						style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+						app:boxStrokeColor="@color/md_theme_light_tertiaryContainer"
+						app:hintTextColor="@color/md_theme_light_tertiaryContainer"
+						app:prefixText="P/">
+						<com.google.android.material.textfield.TextInputEditText
+							android:id="@+id/password_edittext"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:textSize="16sp"
+							android:textColor="@color/Text_Color"
+							android:hint="Type Password"
+							android:textColorHint="@color/md_theme_light_tertiaryContainer"
+							android:singleLine="true"
+							android:inputType="textPassword"
+							android:imeOptions="actionNext" />
+					</com.google.android.material.textfield.TextInputLayout>
+					<com.google.android.material.textfield.TextInputLayout
+						android:id="@+id/textinput_secret_code"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginTop="6dp"
+						style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+						app:boxStrokeColor="@color/md_theme_light_tertiaryContainer"
+						app:hintTextColor="@color/md_theme_light_tertiaryContainer"
+						app:prefixText="Code/">
+						<com.google.android.material.textfield.TextInputEditText
+							android:id="@+id/edittext_secreteCode"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:textSize="16sp"
+							android:textColor="@color/Text_Color"
+							android:hint="Type Secret Code"
+							android:textColorHint="@color/md_theme_light_tertiaryContainer"
+							android:singleLine="true"
+							android:inputType="textPassword"
+							android:imeOptions="actionNext" />
+					</com.google.android.material.textfield.TextInputLayout>
+					<LinearLayout
+						android:id="@+id/BG_CAPTCHA"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginLeft="50dp"
+						android:layout_marginTop="10dp"
+						android:layout_marginRight="50dp"
+						android:layout_marginBottom="8dp"
+						android:padding="4dp"
+						android:background="@color/layout_dot"
+						android:orientation="horizontal">
+						<LinearLayout
+							android:id="@+id/div1"
+							android:layout_width="match_parent"
+							android:layout_height="match_parent"
+							android:padding="8dp"
+							android:orientation="vertical"
+							android:layout_weight="1" />
+						<TextView
+							android:id="@+id/capta1"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:padding="8dp"
+							android:text="8"
+							android:textSize="14sp"
+							android:textStyle="bold"
+							android:textColor="@color/md_theme_light_surfaceVariant"
+							android:rotation="999"
+							android:translationX="14.0dp"
+							android:scaleX="1.3"
+							android:scaleY="1.5" />
+						<TextView
+							android:id="@+id/capta2"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:padding="8dp"
+							android:text="0"
+							android:textSize="14sp"
+							android:textStyle="bold"
+							android:textColor="@color/md_theme_light_secondaryContainer"
+							android:rotation="45"
+							android:translationX="9.0dp"
+							android:scaleX="1.2"
+							android:scaleY="1.4" />
+						<TextView
+							android:id="@+id/capta3"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:padding="8dp"
+							android:text="5"
+							android:textSize="14sp"
+							android:textStyle="bold"
+							android:textColor="@color/md_theme_light_secondaryContainer"
+							android:rotation="20"
+							android:translationX="-5.0dp"
+							android:translationY="0.2dp"
+							android:scaleY="1.6" />
+						<TextView
+							android:id="@+id/capta4"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:padding="8dp"
+							android:text="6"
+							android:textSize="16sp"
+							android:textStyle="bold"
+							android:textColor="@color/md_theme_light_secondaryContainer"
+							android:rotation="421"
+							android:translationX="-15.0dp"
+							android:scaleX="1.3" />
+						<TextView
+							android:id="@+id/capta5"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:padding="8dp"
+							android:text="8"
+							android:textSize="14sp"
+							android:textStyle="bold"
+							android:textColor="@color/md_theme_light_secondaryContainer"
+							android:rotation="18"
+							android:translationX="-25.0dp"
+							android:scaleX="1.8" />
+						<TextView
+							android:id="@+id/capta6"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:padding="8dp"
+							android:text="8"
+							android:textSize="14sp"
+							android:textStyle="bold"
+							android:textColor="@color/md_theme_light_secondaryContainer"
+							android:rotation="413"
+							android:translationX="-34.0dp"
+							android:scaleX="2.0" />
+						<LinearLayout
+							android:id="@+id/div2"
+							android:layout_width="match_parent"
+							android:layout_height="match_parent"
+							android:padding="8dp"
+							android:orientation="vertical"
+							android:layout_weight="1" />
+						<ImageView
+							android:id="@+id/IC_REFRESH_CAPTCHA"
+							android:layout_width="30dp"
+							android:layout_height="30dp"
+							android:src="@drawable/icon_autorenew_round"
+							android:scaleType="centerInside" />
+					</LinearLayout>
+					<LinearLayout
+						android:id="@+id/linear9"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:padding="8dp"
+						android:orientation="horizontal">
+						<com.google.android.material.textfield.TextInputLayout
+							android:id="@+id/textinput_Captcha"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:layout_marginTop="8dp"
+							android:layout_weight="1"
+							style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+							app:boxStrokeColor="@color/md_theme_light_tertiaryContainer"
+							app:hintTextColor="@color/md_theme_light_tertiaryContainer"
+							app:prefixText="Captcha/">
+							<com.google.android.material.textfield.TextInputEditText
+								android:id="@+id/edittext_Captcha"
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:textSize="16sp"
+								android:textColor="@color/Text_Color"
+								android:hint="Type Captcha Code"
+								android:textColorHint="@color/md_theme_light_tertiaryContainer"
+								android:singleLine="true"
+								android:inputType="numberSigned"
+								android:imeOptions="actionDone" />
+						</com.google.android.material.textfield.TextInputLayout>
+						<Button
+							android:id="@+id/button1"
+							android:layout_width="wrap_content"
+							android:layout_height="50dp"
+							android:padding="8dp"
+							android:text="Verify"
+							android:textSize="14sp"
+							android:textColor="@color/md_theme_light_onTertiary"
+							style="@style/Widget.Material3.Button.TonalButton" />
+					</LinearLayout>
+					<Button
+						android:id="@+id/Done"
+						android:layout_width="match_parent"
+						android:layout_height="55dp"
+						android:layout_marginLeft="60dp"
+						android:layout_marginTop="30dp"
+						android:layout_marginRight="60dp"
+						android:padding="8dp"
+						android:text="Login Now"
+						android:textSize="16sp"
+						android:textStyle="bold"
+						android:textColor="@color/md_theme_dark_primary"
+						android:enabled="false"
+						android:layout_gravity="center_horizontal|center_vertical"
+						style="@style/Widget.Material3.Button.ElevatedButton.Icon"
+						app:icon="@drawable/icon_done_outline_round" />
+				</LinearLayout>
+				<LinearLayout
+					android:id="@+id/linear10"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:padding="8dp"
+					android:orientation="horizontal" />
+				<Button
+					android:id="@+id/button2"
+					android:layout_width="wrap_content"
+					android:layout_height="70dp"
+					android:padding="10dp"
+					android:text="Create required Database (fasterpanelv1)"
+					android:textSize="16sp"
+					android:textColor="@color/md_theme_light_onTertiary"
+					style="@style/Widget.Material3.Button.TonalButton"
+					android:layout_centerInParent="true" />
+			</RelativeLayout>
+		</LinearLayout>
+	</ScrollView>
+</LinearLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="bottomSheetDialogTheme">@style/ThemeOverlay.App.BottomSheetDialog</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="android:fontFamily">@font/material3font</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorControlHighlight">@color/colorControlHighlight</item>
+        <item name="colorControlNormal">@color/colorControlNormal</item>
+        <item name="android:statusBarColor">@color/DarkBlue</item>
+        <item name="android:navigationBarColor">@color/DarkBlue</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+    
+    <style name="AppTheme.DebugActivity" parent="AppTheme">
+        <item name="android:background">@color/DarkBlue</item>
+   </style>
+
+    <style name="MaterialDialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_in</item>
+        <item name="android:windowExitAnimation">@anim/slide_out</item>
+    </style>
+    
+    <style name="CustomExpandedTitleText">
+           <item name="android:fontFamily">@font/material3font</item>
+           <item name="android:textSize">25sp</item>
+       </style>
+       
+       <style name="CustomCollapsedTitleText">
+           <item name="android:fontFamily">@font/material3font</item>
+           <item name="android:textSize">25sp</item>
+       </style>
+       
+       <style name="DrawerTextAppearance" parent="TextAppearance.AppCompat.Widget.ActionBar.Menu">
+            <item name="fontFamily">@font/material3font</item>
+       </style>
+    
+    <style name="AppTheme.FullScreen" parent="AppTheme">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+    
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.Material3.Dark.ActionBar" />
+    
+    <style name="ThemeOverlay.App.BottomSheetDialog" parent="ThemeOverlay.Material3.BottomSheetDialog">
+        <item name="android:navigationBarColor">@color/bottom_sheet</item>
+        <item name="bottomSheetStyle">@style/ModalBottomSheetDialog</item>
+    </style>
+    
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.Material3.Dark" />
+    
+    <style name="ModalBottomSheetDialog" parent="Widget.Material3.BottomSheet.Modal">
+        <item name="backgroundTint">@color/bottom_sheet</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.App.LargeComponent</item>
+    </style>
+    
+    <style name="ShapeAppearance.App.LargeComponent" parent="ShapeAppearance.Material3.LargeComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">30dp</item>
+    </style>
+</resources>

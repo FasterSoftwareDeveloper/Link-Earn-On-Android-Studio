@@ -1,0 +1,78 @@
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical">
+	<LinearLayout
+		android:id="@+id/background"
+		android:layout_width="wrap_content"
+		android:layout_height="match_parent"
+		android:gravity="left"
+		android:orientation="vertical"
+		android:background="@drawable/start_round_drawer">
+		<LinearLayout
+			android:id="@+id/HeaderBg"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="10dp"
+			android:layout_marginTop="50dp"
+			android:layout_marginRight="10dp"
+			android:layout_marginBottom="4dp"
+			android:paddingTop="2dp"
+			android:paddingRight="2dp"
+			android:paddingBottom="2dp"
+			android:gravity="center_horizontal|center_vertical"
+			android:orientation="horizontal">
+			<de.hdodenhof.circleimageview.CircleImageView
+				android:id="@+id/logo"
+				android:layout_width="45dp"
+				android:layout_height="45dp"
+				android:layout_marginRight="5dp"
+				android:src="@drawable/logo"
+				app:civ_border_width="0dp"
+				app:civ_border_color="#6494D9"
+				app:civ_circle_background_color="#FFFFFF"
+				app:civ_border_overlay="true" />
+			<LinearLayout
+				android:id="@+id/ln_3"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:paddingLeft="2dp"
+				android:paddingTop="4dp"
+				android:paddingRight="4dp"
+				android:paddingBottom="4dp"
+				android:gravity="center_vertical"
+				android:orientation="vertical"
+				android:layout_weight="1">
+				<TextView
+					android:id="@+id/Full_Name"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="Full Name"
+					android:textSize="18sp"
+					android:textStyle="bold"
+					android:textColor="?attr/colorOnSurface" />
+				<TextView
+					android:id="@+id/Balance"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="Balance"
+					android:textSize="14sp"
+					android:layout_weight="1"
+					android:textColor="?attr/colorOnSurfaceVariant" />
+			</LinearLayout>
+		</LinearLayout>
+		<com.google.android.material.navigation.NavigationView
+			android:id="@+id/navigationView"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:gravity="center_horizontal|center_vertical"
+			app:menu="@menu/material3drawer"
+			android:background="@drawable/end_round_drawer"
+			android:layout_gravity="start"
+			android:fitsSystemWindows="true"
+			app:itemTextAppearance="@style/DrawerTextAppearance" />
+	</LinearLayout>
+</LinearLayout>

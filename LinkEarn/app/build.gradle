@@ -1,0 +1,41 @@
+plugins {
+	id 'com.android.application'
+}
+
+android {
+	compileSdk 34
+	
+	useLibrary 'org.apache.http.legacy'
+	
+	defaultConfig {
+		applicationId "yt.linkearn.faster"
+		namespace "yt.linkearn.faster"
+		minSdkVersion 24
+		targetSdkVersion 35
+		versionCode 2
+		versionName "1.5"
+	}
+	
+	buildTypes {
+		release {
+			minifyEnabled false
+			proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+		}
+	}
+}
+
+dependencies {
+	implementation fileTree(dir: 'libs', include: ['*.jar'])
+	implementation 'androidx.appcompat:appcompat:1.7.0'
+	implementation 'com.google.android.material:material:1.12.0'
+	implementation platform('com.google.firebase:firebase-bom:33.7.0')
+	implementation 'com.google.firebase:firebase-auth'
+	implementation 'com.google.firebase:firebase-database'
+	implementation 'com.github.bumptech.glide:glide:4.16.0'
+	implementation 'com.google.code.gson:gson:2.11.0'
+	implementation 'com.squareup.okhttp3:okhttp:4.12.0'
+	implementation 'de.hdodenhof:circleimageview:3.1.0'
+	implementation 'com.airbnb.android:lottie:6.5.2'
+	implementation 'com.google.firebase:firebase-messaging'
+	implementation 'androidx.startup:startup-runtime:1.2.0'
+}

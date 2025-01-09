@@ -1,0 +1,100 @@
+<androidx.drawerlayout.widget.DrawerLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/_drawer"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	tools:openDrawer="start">
+	<androidx.coordinatorlayout.widget.CoordinatorLayout
+		android:id="@+id/_coordinator"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+		<com.google.android.material.appbar.AppBarLayout
+			android:id="@+id/_app_bar"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:theme="@style/AppTheme.AppBarOverlay">
+<com.google.android.material.appbar.MaterialToolbar
+				android:id="@+id/_toolbar"
+				android:layout_width="match_parent"
+				android:layout_height="?attr/actionBarSize"
+				android:background="?attr/colorPrimary"
+				app:popupTheme="@style/AppTheme.PopupOverlay" />
+		</com.google.android.material.appbar.AppBarLayout>
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:orientation="vertical"
+			app:layout_behavior="@string/appbar_scrolling_view_behavior">
+			<androidx.core.widget.NestedScrollView
+				android:id="@+id/vscroll1"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:fillViewport="true"
+				android:scrollbars="none">
+				<LinearLayout
+					android:id="@+id/linear1"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:background="@color/DarkBlue"
+					android:orientation="vertical">
+					<LinearLayout
+						android:id="@+id/linear4"
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:orientation="vertical"
+						android:layout_weight="1">
+						<LinearLayout
+							android:id="@+id/linear2"
+							android:layout_width="match_parent"
+							android:layout_height="match_parent"
+							android:orientation="vertical">
+							<com.google.android.material.search.SearchBar
+								android:id="@+id/search_bar"
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:orientation="horizontal"
+								android:hint="Search_Task"
+								app:navigationIcon="@drawable/icon_menu_round" />
+							<androidx.recyclerview.widget.RecyclerView
+								android:id="@+id/task1"
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:padding="8dp"
+								android:visibility="visible" />
+							<androidx.recyclerview.widget.RecyclerView
+								android:id="@+id/task2"
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:padding="8dp"
+								android:visibility="gone" />
+							<androidx.recyclerview.widget.RecyclerView
+								android:id="@+id/task_status"
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:padding="8dp"
+								android:visibility="gone" />
+						</LinearLayout>
+					</LinearLayout>
+					<com.google.android.material.bottomnavigation.BottomNavigationView
+						android:id="@+id/bottom_nav"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:background="@color/DarkBlue"
+						android:orientation="horizontal"
+						android:layout_alignParentBottom="true"
+						app:menu="@menu/fasterbottomnavmenu" />
+				</LinearLayout>
+			</androidx.core.widget.NestedScrollView>
+		</LinearLayout>
+	</androidx.coordinatorlayout.widget.CoordinatorLayout>
+	<LinearLayout
+		android:id="@+id/_nav_view"
+		android:layout_width="320dp"
+		android:layout_height="match_parent"
+		android:layout_gravity="start"
+		android:background="#EEEEEE">
+		<include layout="@layout/_drawer_dashboard" android:id="@+id/drawer" />
+	</LinearLayout>
+</androidx.drawerlayout.widget.DrawerLayout>

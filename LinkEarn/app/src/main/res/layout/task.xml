@@ -1,0 +1,677 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/_coordinator"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/DarkBlue"
+	android:fitsSystemWindows="true">
+	<com.google.android.material.appbar.AppBarLayout
+		android:id="@+id/_app_bar"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:fitsSystemWindows="true"
+		android:background="@color/DarkBlue">
+		<com.google.android.material.appbar.CollapsingToolbarLayout
+			android:id="@+id/collapsingtoolbar1"
+			android:layout_width="match_parent"
+			android:padding="8dp"
+			android:fitsSystemWindows="true"
+			app:layout_scrollFlags="scroll|exitUntilCollapsed"
+			android:layout_height="?attr/collapsingToolbarLayoutLargeSize"
+			app:contentScrim="@color/DarkBlue"
+			app:collapsedTitleGravity="left"
+			app:titleCollapseMode="scale"
+			app:expandedTitleTextAppearance="@style/CustomExpandedTitleText"
+			app:collapsedTitleTextAppearance="@style/CustomCollapsedTitleText">
+<com.google.android.material.appbar.MaterialToolbar
+				android:id="@+id/_toolbar"
+				android:layout_width="match_parent"
+				android:layout_height="?attr/actionBarSize"
+				app:layout_collapseMode="pin"
+				app:navigationIcon="@drawable/icon_arrow_back_round"
+				app:title="Your Task"
+				android:background="@color/DarkBlue" />
+		</com.google.android.material.appbar.CollapsingToolbarLayout>
+	</com.google.android.material.appbar.AppBarLayout>
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical"
+		app:layout_behavior="@string/appbar_scrolling_view_behavior">
+		<androidx.core.widget.NestedScrollView
+			android:id="@+id/vscroll1"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			app:layout_behavior="@string/appbar_scrolling_view_behavior"
+			android:fillViewport="true"
+			android:scrollbars="none">
+			<LinearLayout
+				android:id="@+id/linear1"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:padding="8dp"
+				android:background="@color/DarkBlue"
+				android:orientation="vertical">
+				<LinearLayout
+					android:id="@+id/add_task"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:padding="8dp"
+					android:orientation="vertical"
+					android:visibility="gone">
+					<com.google.android.material.textfield.TextInputLayout
+						android:id="@+id/title_tablayout"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginLeft="30dp"
+						android:layout_marginTop="15dp"
+						android:layout_marginRight="30dp"
+						style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+						app:counterEnabled="true"
+						app:counterMaxLength="50">
+						<EditText
+							android:id="@+id/title_txt"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:padding="8dp"
+							android:textSize="16sp"
+							android:textColor="#FAFAFA"
+							android:hint="Type your task title"
+							android:textColorHint="#607D8B"
+							android:singleLine="true"
+							android:imeOptions="actionNext" />
+					</com.google.android.material.textfield.TextInputLayout>
+					<com.google.android.material.textfield.TextInputLayout
+						android:id="@+id/description_textlayout"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginLeft="30dp"
+						android:layout_marginTop="15dp"
+						android:layout_marginRight="30dp"
+						style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+						app:counterEnabled="true"
+						app:counterMaxLength="170">
+						<EditText
+							android:id="@+id/description_txt"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:padding="8dp"
+							android:gravity="top"
+							android:textSize="16sp"
+							android:textColor="#FAFAFA"
+							android:hint="Type task description"
+							android:textColorHint="#607D8B"
+							android:lines="4" />
+					</com.google.android.material.textfield.TextInputLayout>
+					<com.google.android.material.textfield.TextInputLayout
+						android:id="@+id/website_link_tablayout"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginLeft="30dp"
+						android:layout_marginTop="15dp"
+						android:layout_marginRight="30dp"
+						style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+						<EditText
+							android:id="@+id/link_txt"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:padding="8dp"
+							android:textSize="16sp"
+							android:textColor="#FAFAFA"
+							android:hint="Type your website link"
+							android:textColorHint="#607D8B"
+							android:singleLine="true"
+							android:imeOptions="actionNext" />
+					</com.google.android.material.textfield.TextInputLayout>
+					<com.google.android.material.textfield.TextInputLayout
+						android:id="@+id/country_tablayout"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginLeft="30dp"
+						android:layout_marginTop="15dp"
+						android:layout_marginRight="30dp"
+						style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+						<AutoCompleteTextView
+							android:id="@+id/country_txt"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:padding="8dp"
+							android:textSize="16sp"
+							android:textColor="@color/Text_Color"
+							android:hint="Select which country the user will work with\?"
+							android:textColorHint="#607D8B"
+							android:inputType="none" />
+					</com.google.android.material.textfield.TextInputLayout>
+					<TextView
+						android:id="@+id/textview5"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginTop="5dp"
+						android:padding="8dp"
+						android:text="Select task category"
+						android:textSize="14sp"
+						android:textStyle="bold"
+						android:textColor="@color/md_theme_light_errorContainer"
+						android:layout_gravity="center_horizontal|center_vertical" />
+					<com.google.android.material.button.MaterialButtonToggleGroup
+						android:id="@+id/category_body"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginTop="10dp"
+						android:layout_marginBottom="5dp"
+						android:gravity="center_horizontal|center_vertical"
+						android:orientation="horizontal"
+						android:layout_gravity="center_horizontal|center_vertical"
+						app:singleSelection="true"
+						app:checkedButton="@id/button1"
+						app:selectionRequired="true">
+						<com.google.android.material.button.MaterialButton
+							android:id="@+id/button1"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:padding="8dp"
+							android:text="Website Visit"
+							android:textSize="16sp"
+							android:textColor="@color/Text_Color"
+							style="?attr/materialButtonOutlinedStyle"
+							android:enabled="true" />
+						<com.google.android.material.button.MaterialButton
+							android:id="@+id/button2"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:padding="8dp"
+							android:text="Short Link"
+							android:textSize="16sp"
+							android:textColor="@color/Text_Color"
+							style="?attr/materialButtonOutlinedStyle" />
+					</com.google.android.material.button.MaterialButtonToggleGroup>
+					<com.google.android.material.textfield.TextInputLayout
+						android:id="@+id/destinationlink_textlayout"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginLeft="30dp"
+						android:layout_marginTop="5dp"
+						android:layout_marginRight="30dp"
+						android:layout_marginBottom="5dp"
+						style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+						android:visibility="gone">
+						<EditText
+							android:id="@+id/destinationlink_txt"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:padding="8dp"
+							android:textSize="16sp"
+							android:textColor="#FAFAFA"
+							android:hint="Type task destination link"
+							android:textColorHint="#607D8B"
+							android:singleLine="true"
+							android:imeOptions="actionNext" />
+					</com.google.android.material.textfield.TextInputLayout>
+					<TextView
+						android:id="@+id/textview4"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:padding="8dp"
+						android:text="Select workers"
+						android:textSize="14sp"
+						android:textStyle="bold"
+						android:textColor="@color/md_theme_light_errorContainer"
+						android:layout_gravity="center_horizontal|center_vertical" />
+					<com.google.android.material.slider.Slider
+						android:id="@+id/slider_workers"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:padding="8dp"
+						android:orientation="horizontal"
+						android:layout_weight="1"
+						android:valueFrom="3"
+						android:valueTo="30"
+						android:stepSize="1"
+						android:contentDescription="Workerselector" />
+					<LinearLayout
+						android:id="@+id/slider2_body"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:gravity="right|center_vertical"
+						android:orientation="horizontal">
+						<TextView
+							android:id="@+id/textview26"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:paddingLeft="8dp"
+							android:paddingTop="8dp"
+							android:paddingBottom="8dp"
+							android:text="Workers Selected:"
+							android:textSize="14sp"
+							android:textColor="#9E9E9E" />
+						<TextView
+							android:id="@+id/slider_worker_txt"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:padding="8dp"
+							android:text="3"
+							android:textSize="14sp"
+							android:textColor="#9E9E9E" />
+					</LinearLayout>
+					<TextView
+						android:id="@+id/textview24"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:padding="8dp"
+						android:text="How much will you pay your workers"
+						android:textSize="16sp"
+						android:textStyle="bold"
+						android:textColor="@color/md_theme_light_errorContainer"
+						android:layout_gravity="center_horizontal|center_vertical" />
+					<com.google.android.material.slider.Slider
+						android:id="@+id/slider_worker_pay"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:padding="8dp"
+						android:orientation="horizontal"
+						android:layout_weight="1"
+						android:valueFrom="0.005"
+						android:valueTo="5.000"
+						android:stepSize="0.005"
+						android:contentDescription="Paymentselector" />
+					<LinearLayout
+						android:id="@+id/slider3_body"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:gravity="right|center_vertical"
+						android:orientation="horizontal">
+						<TextView
+							android:id="@+id/textview27"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:paddingLeft="8dp"
+							android:paddingTop="8dp"
+							android:paddingBottom="8dp"
+							android:text="Workers Payment Selected:"
+							android:textSize="14sp"
+							android:textColor="#9E9E9E" />
+						<TextView
+							android:id="@+id/slider_workerpay_txt"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:paddingLeft="8dp"
+							android:paddingTop="8dp"
+							android:paddingRight="2dp"
+							android:paddingBottom="8dp"
+							android:text="0.005"
+							android:textSize="14sp"
+							android:textColor="#9E9E9E" />
+						<TextView
+							android:id="@+id/textview25"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:paddingTop="8dp"
+							android:paddingRight="8dp"
+							android:paddingBottom="8dp"
+							android:text="$"
+							android:textSize="14sp"
+							android:textColor="#9E9E9E" />
+					</LinearLayout>
+					<TextView
+						android:id="@+id/textview2"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:padding="8dp"
+						android:text="Select visit times minutes:seconds"
+						android:textSize="14sp"
+						android:textStyle="bold"
+						android:textColor="@color/md_theme_light_errorContainer"
+						android:layout_gravity="center_horizontal|center_vertical" />
+					<com.google.android.material.slider.Slider
+						android:id="@+id/slider_time"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:padding="8dp"
+						android:orientation="horizontal"
+						android:layout_weight="1"
+						android:valueFrom="15"
+						android:valueTo="1800"
+						android:stepSize="15"
+						android:contentDescription="Timeselector" />
+					<LinearLayout
+						android:id="@+id/slider1_body"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:gravity="right|center_vertical"
+						android:orientation="horizontal">
+						<LinearLayout
+							android:id="@+id/linear12"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:orientation="vertical">
+							<LinearLayout
+								android:id="@+id/linear14"
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:gravity="right"
+								android:orientation="horizontal">
+								<TextView
+									android:id="@+id/textview28"
+									android:layout_width="wrap_content"
+									android:layout_height="wrap_content"
+									android:paddingLeft="8dp"
+									android:paddingTop="8dp"
+									android:paddingBottom="8dp"
+									android:text="Visit Time Selected:"
+									android:textSize="14sp"
+									android:textColor="#9E9E9E" />
+								<TextView
+									android:id="@+id/slider_time_txt"
+									android:layout_width="wrap_content"
+									android:layout_height="wrap_content"
+									android:padding="8dp"
+									android:text="0:15"
+									android:textSize="14sp"
+									android:textColor="#9E9E9E" />
+							</LinearLayout>
+							<LinearLayout
+								android:id="@+id/linear13"
+								android:layout_width="match_parent"
+								android:layout_height="wrap_content"
+								android:gravity="right"
+								android:orientation="horizontal">
+								<TextView
+									android:id="@+id/textview29"
+									android:layout_width="wrap_content"
+									android:layout_height="wrap_content"
+									android:paddingLeft="8dp"
+									android:paddingTop="8dp"
+									android:paddingBottom="8dp"
+									android:text="Convert to seconds:"
+									android:textSize="14sp"
+									android:textColor="#9E9E9E" />
+								<TextView
+									android:id="@+id/timeInSecondTxt"
+									android:layout_width="wrap_content"
+									android:layout_height="wrap_content"
+									android:padding="8dp"
+									android:text="15"
+									android:textSize="14sp"
+									android:textColor="#9E9E9E" />
+							</LinearLayout>
+						</LinearLayout>
+					</LinearLayout>
+					<LinearLayout
+						android:id="@+id/linear2"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginTop="20dp"
+						android:padding="8dp"
+						android:orientation="vertical">
+						<TextView
+							android:id="@+id/textview6"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:padding="8dp"
+							android:text="Billing!"
+							android:textSize="18sp"
+							android:textStyle="bold"
+							android:textColor="@color/colorSurface"
+							android:layout_gravity="center_horizontal|center_vertical" />
+						<LinearLayout
+							android:id="@+id/linear3"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:padding="1dp"
+							android:orientation="horizontal">
+							<TextView
+								android:id="@+id/textview7"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:padding="8dp"
+								android:text="Workers:"
+								android:textSize="14sp"
+								android:textColor="@color/md_theme_light_primaryContainer" />
+							<LinearLayout
+								android:id="@+id/linear4"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:padding="8dp"
+								android:orientation="horizontal"
+								android:layout_weight="1" />
+							<TextView
+								android:id="@+id/workers_total"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:paddingLeft="8dp"
+								android:paddingTop="8dp"
+								android:paddingRight="2dp"
+								android:paddingBottom="8dp"
+								android:text="0.015"
+								android:textSize="14sp"
+								android:textColor="@color/md_theme_light_primaryContainer" />
+							<TextView
+								android:id="@+id/textview9"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:paddingTop="8dp"
+								android:paddingRight="8dp"
+								android:paddingBottom="8dp"
+								android:text="$"
+								android:textSize="16sp"
+								android:textColor="@color/md_theme_light_primaryContainer" />
+						</LinearLayout>
+						<LinearLayout
+							android:id="@+id/linear5"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:padding="1dp"
+							android:orientation="horizontal">
+							<TextView
+								android:id="@+id/textview10"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:padding="8dp"
+								android:text="Visit Times:"
+								android:textSize="14sp"
+								android:textColor="@color/md_theme_light_primaryContainer" />
+							<LinearLayout
+								android:id="@+id/linear6"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:padding="8dp"
+								android:orientation="horizontal"
+								android:layout_weight="1" />
+							<TextView
+								android:id="@+id/visit_time_total"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:paddingLeft="8dp"
+								android:paddingTop="8dp"
+								android:paddingRight="2dp"
+								android:paddingBottom="8dp"
+								android:text="0.000"
+								android:textSize="14sp"
+								android:textColor="@color/md_theme_light_primaryContainer" />
+							<TextView
+								android:id="@+id/textview12"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:paddingTop="8dp"
+								android:paddingRight="8dp"
+								android:paddingBottom="8dp"
+								android:text="$"
+								android:textSize="16sp"
+								android:textColor="@color/md_theme_light_primaryContainer" />
+						</LinearLayout>
+						<LinearLayout
+							android:id="@+id/linear7"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:padding="1dp"
+							android:orientation="horizontal">
+							<TextView
+								android:id="@+id/textview13"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:padding="8dp"
+								android:text="Fee:"
+								android:textSize="14sp"
+								android:textColor="@color/md_theme_light_primaryContainer" />
+							<LinearLayout
+								android:id="@+id/linear8"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:padding="8dp"
+								android:orientation="horizontal"
+								android:layout_weight="1" />
+							<TextView
+								android:id="@+id/fee_total"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:paddingLeft="8dp"
+								android:paddingTop="8dp"
+								android:paddingRight="2dp"
+								android:paddingBottom="8dp"
+								android:text="0.0021"
+								android:textSize="14sp"
+								android:textColor="@color/md_theme_light_primaryContainer" />
+							<TextView
+								android:id="@+id/textview15"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:paddingTop="8dp"
+								android:paddingRight="8dp"
+								android:paddingBottom="8dp"
+								android:text="$"
+								android:textSize="16sp"
+								android:textColor="@color/md_theme_light_primaryContainer" />
+						</LinearLayout>
+						<com.google.android.material.divider.MaterialDivider
+							android:id="@+id/linear11"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:padding="8dp"
+							android:orientation="horizontal"
+							app:dividerInsetStart="16dp"
+							app:dividerInsetEnd="16dp" />
+						<LinearLayout
+							android:id="@+id/linear9"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:padding="1dp"
+							android:orientation="horizontal">
+							<TextView
+								android:id="@+id/textview16"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:padding="8dp"
+								android:text="Total:"
+								android:textSize="14sp"
+								android:textStyle="bold"
+								android:textColor="@color/colorError" />
+							<LinearLayout
+								android:id="@+id/linear10"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:padding="8dp"
+								android:orientation="horizontal"
+								android:layout_weight="1" />
+							<TextView
+								android:id="@+id/total_txt"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:paddingLeft="8dp"
+								android:paddingTop="8dp"
+								android:paddingRight="2dp"
+								android:paddingBottom="8dp"
+								android:text="0.017"
+								android:textSize="14sp"
+								android:textStyle="bold"
+								android:textColor="@color/colorError" />
+							<TextView
+								android:id="@+id/textview18"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:paddingTop="8dp"
+								android:paddingRight="8dp"
+								android:paddingBottom="8dp"
+								android:text="$"
+								android:textSize="16sp"
+								android:textStyle="bold"
+								android:textColor="@color/colorError" />
+						</LinearLayout>
+					</LinearLayout>
+					<Button
+						android:id="@+id/button3"
+						android:layout_width="300dp"
+						android:layout_height="wrap_content"
+						android:layout_marginLeft="10dp"
+						android:layout_marginTop="20dp"
+						android:layout_marginRight="10dp"
+						android:layout_marginBottom="20dp"
+						android:padding="8dp"
+						android:text="Pay &amp; Publish Task"
+						android:textSize="16sp"
+						android:textStyle="bold"
+						android:textColor="#000000"
+						android:layout_gravity="center_horizontal|center_vertical" />
+				</LinearLayout>
+				<LinearLayout
+					android:id="@+id/your_task"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:padding="8dp"
+					android:orientation="vertical">
+					<com.google.android.material.button.MaterialButtonToggleGroup
+						android:id="@+id/Task_bt_body"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginTop="10dp"
+						android:layout_marginBottom="5dp"
+						android:gravity="center_horizontal|center_vertical"
+						android:orientation="horizontal"
+						android:layout_gravity="center_horizontal|center_vertical"
+						app:singleSelection="true"
+						app:checkedButton="@id/Your_task_bt"
+						app:selectionRequired="true">
+						<com.google.android.material.button.MaterialButton
+							android:id="@+id/Your_task_bt"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:padding="8dp"
+							android:text="Your All Task"
+							android:textSize="16sp"
+							android:textColor="@color/Text_Color"
+							style="?attr/materialButtonOutlinedStyle"
+							android:enabled="true" />
+						<com.google.android.material.button.MaterialButton
+							android:id="@+id/Worker_Task_Status_bt"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:padding="8dp"
+							android:text="Task Pending Deletion"
+							android:textSize="16sp"
+							android:textColor="@color/Text_Color"
+							style="?attr/materialButtonOutlinedStyle" />
+					</com.google.android.material.button.MaterialButtonToggleGroup>
+					<androidx.recyclerview.widget.RecyclerView
+						android:id="@+id/your_task_list"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:padding="8dp" />
+					<androidx.recyclerview.widget.RecyclerView
+						android:id="@+id/worker_task_status_list"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:padding="8dp"
+						android:visibility="gone" />
+				</LinearLayout>
+			</LinearLayout>
+		</androidx.core.widget.NestedScrollView>
+	</LinearLayout>
+	<com.google.android.material.floatingactionbutton.FloatingActionButton
+		android:id="@+id/_fab"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_margin="16dp"
+		android:layout_gravity="right|bottom"
+		app:srcCompat="@drawable/icon_plus_round" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

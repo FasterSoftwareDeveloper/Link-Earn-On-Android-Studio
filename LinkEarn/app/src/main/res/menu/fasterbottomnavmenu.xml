@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_WebsiteVisit"
+        android:title="website Visit"
+        android:icon="@drawable/icon_directions_transit" />
+    
+    <item
+        android:id="@+id/nav_shortlink"
+        android:title="Short Link"
+        android:icon="@drawable/icon_ads_click_round" />
+    <item
+        android:id="@+id/nav_taskstatus"
+        android:title="Task Status"
+        android:icon="@drawable/icon_stacked" />
+</menu>

@@ -1,0 +1,90 @@
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical">
+	<com.google.android.material.card.MaterialCardView
+		android:id="@+id/linear_main"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_margin="8dp"
+		app:cardBackgroundColor="@color/VeryDarkBlue"
+		android:gravity="center_vertical"
+		android:orientation="horizontal">
+		<LinearLayout
+			android:id="@+id/linear4"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:orientation="horizontal">
+			<de.hdodenhof.circleimageview.CircleImageView
+				android:id="@+id/logo"
+				android:layout_width="45dp"
+				android:layout_height="45dp"
+				android:layout_margin="5dp"
+				android:src="@drawable/profile_logo"
+				app:civ_border_width="3dp"
+				app:civ_border_color="#008DCD"
+				app:civ_circle_background_color="#FFFFFF"
+				app:civ_border_overlay="true" />
+			<LinearLayout
+				android:id="@+id/linear2"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:paddingLeft="8dp"
+				android:paddingRight="8dp"
+				android:orientation="vertical"
+				android:layout_weight="1">
+				<TextView
+					android:id="@+id/currency"
+					android:focusable="false"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:padding="8dp"
+					android:text="USDT only"
+					android:textSize="16sp"
+					android:textColor="@color/Text_Color" />
+				<TextView
+					android:id="@+id/date"
+					android:focusable="false"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:paddingLeft="8dp"
+					android:paddingRight="8dp"
+					android:paddingBottom="8dp"
+					android:text="10-10-2004 4:12:5"
+					android:textSize="12sp"
+					android:textColor="@color/md_theme_light_errorContainer" />
+			</LinearLayout>
+			<LinearLayout
+				android:id="@+id/linear3"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:padding="8dp"
+				android:gravity="center_horizontal|center_vertical"
+				android:orientation="vertical">
+				<TextView
+					android:id="@+id/money"
+					android:focusable="false"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:paddingLeft="8dp"
+					android:paddingRight="8dp"
+					android:text="0.000$"
+					android:textSize="18sp"
+					android:textColor="@color/colorAccent" />
+				<TextView
+					android:id="@+id/status"
+					android:focusable="false"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:paddingLeft="8dp"
+					android:paddingRight="8dp"
+					android:text="Pending.."
+					android:textSize="16sp"
+					android:textColor="#FFC107" />
+			</LinearLayout>
+		</LinearLayout>
+	</com.google.android.material.card.MaterialCardView>
+</LinearLayout>

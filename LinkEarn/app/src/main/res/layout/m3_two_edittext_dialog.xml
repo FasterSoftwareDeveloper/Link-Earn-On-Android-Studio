@@ -1,0 +1,66 @@
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical">
+	<com.google.android.material.textfield.TextInputLayout
+		android:id="@+id/textinputlayout1"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="12dp"
+		android:layout_marginTop="8dp"
+		android:layout_marginRight="12dp"
+		android:layout_marginBottom="8dp"
+		app:boxCornerRadiusTopStart="18dp"
+		app:boxCornerRadiusTopEnd="18dp"
+		app:boxCornerRadiusBottomStart="18dp"
+		app:boxCornerRadiusBottomEnd="18dp"
+		style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+		app:counterEnabled="true"
+		app:counterMaxLength="50">
+		<com.google.android.material.textfield.TextInputEditText
+			android:id="@+id/editTextTaskId"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:padding="8dp"
+			android:textSize="18sp"
+			android:textColor="#FFFFFF"
+			android:hint="Task Title"
+			android:textColorHint="#607D8B"
+			android:singleLine="true"
+			android:imeOptions="actionNext"
+			android:focusable="true"
+			android:focusableInTouchMode="true" />
+	</com.google.android.material.textfield.TextInputLayout>
+	<com.google.android.material.textfield.TextInputLayout
+		android:id="@+id/textinputlayout2"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="12dp"
+		android:layout_marginTop="8dp"
+		android:layout_marginRight="12dp"
+		android:layout_marginBottom="8dp"
+		app:boxCornerRadiusTopStart="18dp"
+		app:boxCornerRadiusTopEnd="18dp"
+		app:boxCornerRadiusBottomStart="18dp"
+		app:boxCornerRadiusBottomEnd="18dp"
+		style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+		app:counterEnabled="true"
+		app:counterMaxLength="170">
+		<com.google.android.material.textfield.TextInputEditText
+			android:id="@+id/editTextReason"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:padding="8dp"
+			android:gravity="top"
+			android:textSize="18sp"
+			android:textColor="#FFFFFF"
+			android:hint="Task Description"
+			android:textColorHint="#607D8B"
+			android:lines="4"
+			android:focusable="true"
+			android:focusableInTouchMode="true" />
+	</com.google.android.material.textfield.TextInputLayout>
+</LinearLayout>

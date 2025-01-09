@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+  <item
+    android:id="@+id/main_item"
+    android:title="More items">
+      <menu>
+        <item
+          android:id="@+id/account_item"
+          android:icon="@drawable/icon_account"
+          android:title="Account"
+          android:checkable="true"/>
+        <item
+          android:id="@+id/wallet_item"
+          android:icon="@drawable/icon_balance_wallet"
+          android:title="Wallet"
+          android:checkable="true"/>
+        <item
+          android:id="@+id/yourtask_item"
+          android:icon="@drawable/icon_cases"
+          android:title="Your Task"
+          android:checkable="true"/>
+        <item
+          android:id="@+id/leaderboard_item"
+          android:icon="@drawable/icon_leaderboard"
+          android:title="Leaderboard"
+          android:checkable="true"/>
+        <item
+          android:id="@+id/logout_item"
+          android:icon="@drawable/icon_logout"
+          android:title="Logout"
+          android:checkable="true"/>
+      </menu>
+  </item>
+  <item
+    android:id="@+id/labels_item"
+    android:title="Social handles">
+      <menu>
+        <item
+          android:id="@+id/privacy_one"
+          android:icon="@drawable/icon_privacy"
+          android:title="Privacy Policy"
+          android:checkable="true"/>
+        <item
+          android:id="@+id/terms_two"
+          android:icon="@drawable/icon_rule_round"
+          android:title="Terms and Conditions"
+          android:checkable="true"/>
+        <item
+          android:id="@+id/telegram_3"
+          android:icon="@drawable/icon_tele"
+          android:title="Telegram"
+          android:checkable="true"/>
+        <item
+          android:id="@+id/about_4"
+          android:icon="@drawable/icon_info"
+          android:title="About App"
+          android:checkable="true"/>
+      </menu>
+  </item>
+
+</menu>

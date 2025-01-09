@@ -1,0 +1,170 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/_coordinator"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/DarkBlue"
+	android:fitsSystemWindows="true">
+	<com.google.android.material.appbar.AppBarLayout
+		android:id="@+id/_app_bar"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="@color/DarkBlue"
+		android:fitsSystemWindows="true">
+<com.google.android.material.appbar.MaterialToolbar
+			android:id="@+id/_toolbar"
+			android:layout_width="match_parent"
+			android:layout_height="?attr/actionBarSize"
+			app:title="Security and Others Manager"
+			app:navigationIcon="@drawable/icon_arrow_back_round" />
+	</com.google.android.material.appbar.AppBarLayout>
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical"
+		app:layout_behavior="@string/appbar_scrolling_view_behavior">
+		<ScrollView
+			android:id="@+id/vscroll1"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent">
+			<LinearLayout
+				android:id="@+id/linear1"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:paddingLeft="10dp"
+				android:paddingTop="8dp"
+				android:paddingRight="10dp"
+				android:paddingBottom="8dp"
+				android:background="@color/DarkBlue"
+				android:orientation="vertical">
+				<TextView
+					android:id="@+id/textview1"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:padding="8dp"
+					android:text="Privacy Policy Url"
+					android:textSize="16sp"
+					android:textStyle="bold"
+					android:textColor="@color/md_theme_light_errorContainer" />
+				<com.google.android.material.textfield.TextInputLayout
+					android:id="@+id/textinput_privacy_policy"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="6dp"
+					style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+					app:boxStrokeColor="@color/md_theme_light_tertiaryContainer"
+					app:hintTextColor="@color/md_theme_light_tertiaryContainer"
+					app:prefixText="https://">
+					<com.google.android.material.textfield.TextInputEditText
+						android:id="@+id/edittext_privacy"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:textSize="16sp"
+						android:textColor="@color/Text_Color"
+						android:hint="Enter your privacy policy"
+						android:textColorHint="@color/md_theme_light_tertiaryContainer"
+						android:singleLine="true"
+						android:imeOptions="actionNext" />
+				</com.google.android.material.textfield.TextInputLayout>
+				<TextView
+					android:id="@+id/textview2"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:padding="8dp"
+					android:text="Terms &amp; Condition Url"
+					android:textSize="16sp"
+					android:textStyle="bold"
+					android:textColor="@color/md_theme_light_errorContainer" />
+				<com.google.android.material.textfield.TextInputLayout
+					android:id="@+id/textinput_terms"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="6dp"
+					style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+					app:boxStrokeColor="@color/md_theme_light_tertiaryContainer"
+					app:hintTextColor="@color/md_theme_light_tertiaryContainer"
+					app:prefixText="https://">
+					<com.google.android.material.textfield.TextInputEditText
+						android:id="@+id/edittext_terms"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:textSize="16sp"
+						android:textColor="@color/Text_Color"
+						android:hint="Enter your terms &amp; condition"
+						android:textColorHint="@color/md_theme_light_tertiaryContainer"
+						android:singleLine="true"
+						android:imeOptions="actionNext" />
+				</com.google.android.material.textfield.TextInputLayout>
+				<TextView
+					android:id="@+id/textview3"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:padding="8dp"
+					android:text="Telegram Url"
+					android:textSize="16sp"
+					android:textStyle="bold"
+					android:textColor="@color/md_theme_light_errorContainer" />
+				<com.google.android.material.textfield.TextInputLayout
+					android:id="@+id/textinput_tg"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="6dp"
+					style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+					app:boxStrokeColor="@color/md_theme_light_tertiaryContainer"
+					app:hintTextColor="@color/md_theme_light_tertiaryContainer"
+					app:prefixText="https://">
+					<com.google.android.material.textfield.TextInputEditText
+						android:id="@+id/edittext_tg"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:textSize="16sp"
+						android:textColor="@color/Text_Color"
+						android:hint="Enter your telegram url"
+						android:textColorHint="@color/md_theme_light_tertiaryContainer"
+						android:singleLine="true"
+						android:imeOptions="actionNext" />
+				</com.google.android.material.textfield.TextInputLayout>
+				<TextView
+					android:id="@+id/textview4"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:padding="8dp"
+					android:text="About"
+					android:textSize="16sp"
+					android:textStyle="bold"
+					android:textColor="@color/md_theme_light_errorContainer" />
+				<com.google.android.material.textfield.TextInputLayout
+					android:id="@+id/textinputlayout_about"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="6dp"
+					style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+					app:boxStrokeColor="@color/md_theme_light_tertiaryContainer"
+					app:hintTextColor="@color/md_theme_light_tertiaryContainer">
+					<com.google.android.material.textfield.TextInputEditText
+						android:id="@+id/edittext_about"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:textSize="16sp"
+						android:textColor="@color/Text_Color"
+						android:hint="Enter your about"
+						android:textColorHint="@color/md_theme_light_tertiaryContainer"
+						android:singleLine="true"
+						android:imeOptions="actionDone" />
+				</com.google.android.material.textfield.TextInputLayout>
+				<Button
+					android:id="@+id/button10"
+					android:layout_width="200dp"
+					android:layout_height="60dp"
+					android:layout_marginTop="30dp"
+					android:text="Save"
+					android:textSize="16sp"
+					android:textStyle="bold"
+					android:textColor="@color/Text_Color"
+					android:layout_gravity="center_horizontal" />
+			</LinearLayout>
+		</ScrollView>
+	</LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
