@@ -13,9 +13,9 @@
 ![Logo](https://raw.githubusercontent.com/FasterSoftwareDeveloper/Link-Earn-On-Android-Studio/refs/heads/master/Copy%20of%20QuikNapp.png)
 
 ## Links
-YouTube Video: 
+YouTube Video: https://t.me/fastersoftwaredeveloper/340
 
-Telegram Post: 
+Telegram Post: https://t.me/fastersoftwaredeveloper/340
 
 ### 📖 **About the App**  
 
