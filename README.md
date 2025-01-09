@@ -10,7 +10,7 @@
 
 ---
 
-![Logo]()
+![Logo](https://raw.githubusercontent.com/FasterSoftwareDeveloper/Link-Earn-On-Android-Studio/refs/heads/master/Copy%20of%20QuikNapp.png)
 
 ## Links
 YouTube Video: 
